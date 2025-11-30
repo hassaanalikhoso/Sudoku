@@ -3,16 +3,16 @@ Sudoku Game (C++)
 A console-based Sudoku game built in C++ using 2D arrays and modular functions.
 It allows the user to play Sudoku, get hints, check mistakes, erase entries, clear the board, and auto-solve the puzzle while keeping track of the score.
 
-Team Members
+Team Members:
 Hassaan Ali Khoso (Logic Designer & Documenter)
 Hassan Ghazi (Programmer & Documenter)
 
-Overview
+Overview:
 This project produces a fully interactive Sudoku game in the console.
 The player selects difficulty then makes moves one by one if he wants he can receive hints as well. The program checks mistakes, resets the board and autocompletes the entire board if prompted. The program uses a scoring system and ensures all moves follow Sudoku rules.
 Sudoku is not only an enjoyable hobby, it also has many proven cognitive and psychological benefits. It improves logical thinking and enhances problem solving ability.
 
-Features
+Features:
 •	Difficulty selection: Easy, Medium, Hard
 •	Visualize the Sudoku board with 2D arrays
 •	Make a move by entering row, column, and the value per empty place
@@ -33,7 +33,7 @@ o	−20 autocomplete
 •	Victory screen/prompt to play again
 •	Color-coded board for readability
 
-Program Design and Logic
+Program Design and Logic:
 Grid:
 	The program uses the following 2D arrays:
 - board
