@@ -543,11 +543,19 @@ void IsValid()
 	{
 		board[row - 1][col - 1] = input;
 		score = score + 10;
+		if (score < 0)
+		{
+			score = 0;
+		}
 	}
 	else
 	{
 		cout << "Incorrect" << endl;
 		score = score - 5;
+		if (score < 0)
+		{
+			score = 0;
+		}
 		this_thread::sleep_for(chrono::milliseconds(3000));
 	}
 	
@@ -575,10 +583,15 @@ void AutoComplete()
 	{
 		for (int j = 0; j < 9; j++)
 		{
+			score = score - 20;
+			if (score < 0)
+			{
+				score = 0;
+			}
 			board[i][j] = solution[i][j];
 		}
 	}
-	score = score - 20;
+	
 }
 
 void GiveHint()
@@ -590,6 +603,10 @@ void GiveHint()
 			if (board[i][j] == 0)
 			{
 				score = score - 10;
+				if (score < 0)
+				{
+					score = 0;
+				}
 				cout << "row " << i + 1 << ",column " << j + 1 << ": " << solution[i][j];
 				return;
 			}
@@ -606,6 +623,10 @@ void Erase()
 		return;
 	}
 	score = score - 5;
+	if (score < 0)
+	{
+		score = 0;
+	}
 	board[row - 1][col - 1] = 0;
 }
 
@@ -616,6 +637,10 @@ void ClearBoard()
 		for (int j = 0; j < 9; j++)
 		{
 			score = score - 10;
+			if (score < 0)
+			{
+				score = 0;
+			}
 			board[i][j] = orgboard[i][j];
 
 		}
@@ -633,6 +658,10 @@ void Checker()
 			if (board[i][j] != solution[i][j] && board[i][j] != 0)
 			{
 				score = score - 5;
+				if (score < 0)
+				{
+					score = 0;
+				}
 				mistakes++;
 			}
 		}
